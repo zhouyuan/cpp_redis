@@ -201,8 +201,8 @@ tcp_client::async_write(void) {
       __CPP_REDIS_LOG(debug, "cpp_redis::network::tcp_client wrote data and cleans write_buffer");
       std::lock_guard<std::mutex> lock(m_write_buffer_mutex);
 
-	  if (m_write_buffer.empty())
-		  return;
+      if (m_write_buffer.empty())
+        return;
 
       //! Remove what has already been sent and see if we have any more to send
       if (length >= m_write_buffer.front().size())
