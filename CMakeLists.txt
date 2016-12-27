@@ -82,7 +82,7 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 ###
 # executable
 ###
-add_library(${PROJECT} STATIC ${SOURCES})
+add_library(${PROJECT} SHARED ${SOURCES})
 
 IF (WIN32)
   target_link_libraries(${PROJECT} ws2_32)
